@@ -1,4 +1,5 @@
 import { userSettings } from "@config/settings";
+import { getWebsiteUrl } from "../services/url";
 import type { SearchEngineId } from "../types";
 
 interface Engine {
@@ -151,7 +152,7 @@ export function wireSearch(): void {
     e.preventDefault();
     const query = input.value.trim();
     if (!query) return;
-    window.location.href = active.url + encodeURIComponent(query);
+    window.location.href = getWebsiteUrl(query) ?? active.url + encodeURIComponent(query);
   });
 
   input.focus();
