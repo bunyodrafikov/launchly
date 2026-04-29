@@ -96,6 +96,8 @@ export function wireSearch(): void {
 
   if (!form || !input || !engineBtn || !engineIcon || !menu) return;
 
+  form.addEventListener("dragstart", (e) => e.preventDefault());
+
   let active = getActiveEngine();
 
   function applyEngine(engine: Engine): void {
