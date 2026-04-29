@@ -42,10 +42,10 @@ function renderTile(tile: TileDefinition, mode: LayoutMode): string {
   const iconFit = tile.icon?.startsWith("https://cdn.simpleicons.org") ? "contain" : "cover";
   const iconFrameClass = iconFit === "cover" ? "bookmark-icon-frame bookmark-icon-frame--cover" : "bookmark-icon-frame";
   return `
-    <a class="tile bookmark-tile span-${span}" href="${tile.href}" aria-label="Open ${tile.title.replace("\n", " ")}">
+    <a class="tile bookmark-tile span-${span}" href="${tile.href}" aria-label="Open ${tile.title.replace("\n", " ")}" draggable="false">
       <span class="bookmark-title">${tile.title.replace("\n", "<br />")}</span>
       <span class="bookmark-domain">${tile.subtitle ?? ""}</span>
-      ${tile.icon ? `<span class="${iconFrameClass}"><img class="bookmark-icon bookmark-icon--${iconFit}" src="${tile.icon}" alt="" /></span>` : ""}
+      ${tile.icon ? `<span class="${iconFrameClass}"><img class="bookmark-icon bookmark-icon--${iconFit}" src="${tile.icon}" alt="" draggable="false" /></span>` : ""}
     </a>
   `;
 }
