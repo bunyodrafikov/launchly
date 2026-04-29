@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <script>
+      try {
+        var v = JSON.parse(localStorage.getItem("startup-dashboard.themeVars") || "null");
+        if (v) {
+          var r = document.documentElement;
+          for (var k in v) {
+            if (k === "data-theme-tone") r.dataset.themeTone = v[k];
+            else r.style.setProperty(k, v[k]);
+          }
+        }
+      } catch (e) {}
+    </script>
+  </head>
+  <body>
+    <div id="page-veil" aria-hidden="true"></div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

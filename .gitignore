@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.DS_Store
+.env.local
+.local/
+*.log
+coverage/
+.claude
+config/tiles.ts
+config/settings.ts
+config/server.js
+config/icons/*
+!config/icons/.gitkeep
