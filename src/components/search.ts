@@ -13,25 +13,25 @@ export const ENGINES: Engine[] = [
     id: "google",
     name: "Google",
     url: "https://www.google.com/search?q=",
-    icon: "https://cdn.simpleicons.org/google"
+    icon: "https://www.google.com/s2/favicons?domain=google.com&sz=64"
   },
   {
     id: "duckduckgo",
     name: "DuckDuckGo",
     url: "https://duckduckgo.com/?q=",
-    icon: "https://cdn.simpleicons.org/duckduckgo"
+    icon: "https://www.google.com/s2/favicons?domain=duckduckgo.com&sz=64"
   },
   {
     id: "perplexity",
     name: "Perplexity",
     url: "https://www.perplexity.ai/search?q=",
-    icon: "https://cdn.simpleicons.org/perplexity"
+    icon: "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=64"
   },
   {
     id: "chatgpt",
     name: "ChatGPT",
     url: "https://chatgpt.com/?q=",
-    icon: "/assets/icons/chatgpt-example.webp"
+    icon: "https://www.google.com/s2/favicons?domain=chatgpt.com&sz=64"
   }
 ];
 

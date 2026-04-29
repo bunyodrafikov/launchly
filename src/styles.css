@@ -187,9 +187,9 @@ select {
   color: var(--text-muted);
   cursor: pointer;
   display: flex;
-  gap: 5px;
-  height: 46px;
-  padding: 0 10px 0 14px;
+  gap: 6px;
+  height: 56px;
+  padding: 0 10px 0 16px;
 }
 
 .search-engine:hover {
@@ -197,10 +197,10 @@ select {
 }
 
 .search-engine-icon {
-  border-radius: 4px;
-  height: 20px;
+  border-radius: 6px;
+  height: 26px;
   object-fit: contain;
-  width: 20px;
+  width: 26px;
 }
 
 .search-engine-caret {
@@ -214,17 +214,15 @@ select {
 }
 
 .search-engine-menu {
-  background:
-    linear-gradient(145deg, rgba(255,255,255,0.82), rgba(255,255,255,0.68)),
-    rgba(255,255,255,0.40);
+  background: rgba(246, 248, 250, 0.97);
   backdrop-filter: blur(22px) saturate(1.4);
-  border: 1px solid rgba(255,255,255,0.60);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 14px;
-  box-shadow: 0 16px 40px rgba(44,63,75,0.18);
+  box-shadow: 0 16px 40px rgba(44,63,75,0.22);
   left: 0;
   list-style: none;
   margin: 0;
-  min-width: 168px;
+  min-width: 180px;
   padding: 6px;
   position: absolute;
   top: calc(100% + 8px);
@@ -232,10 +230,9 @@ select {
 }
 
 :root[data-theme-tone="dark"] .search-engine-menu {
-  background:
-    linear-gradient(145deg, rgba(36,50,66,0.92), rgba(28,38,52,0.88));
+  background: rgba(24, 34, 48, 0.97);
   border-color: rgba(255,255,255,0.10);
-  box-shadow: 0 14px 36px rgba(0,0,0,0.44);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.52);
 }
 
 .search-engine-option {
@@ -260,10 +257,10 @@ select {
 }
 
 .search-engine-option-icon {
-  border-radius: 4px;
-  height: 18px;
+  border-radius: 5px;
+  height: 22px;
   object-fit: contain;
-  width: 18px;
+  width: 22px;
 }
 
 .search-input {
@@ -273,8 +270,8 @@ select {
   color: var(--text);
   flex: 1;
   font-family: var(--font-family);
-  font-size: 1rem;
-  height: 46px;
+  font-size: 1.05rem;
+  height: 56px;
   min-width: 0;
   outline: none;
   padding: 0 8px;
@@ -297,9 +294,9 @@ select {
   color: var(--text-muted);
   cursor: pointer;
   display: flex;
-  height: 46px;
+  height: 56px;
   justify-content: center;
-  padding: 0 14px 0 8px;
+  padding: 0 16px 0 8px;
   transition: color 0.16s ease;
 }
 
