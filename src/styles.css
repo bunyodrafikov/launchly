@@ -254,14 +254,11 @@ select {
 .bookmark-icon-frame {
   align-items: center;
   align-self: center;
-  backdrop-filter: blur(18px) saturate(1.35);
-  background:
-    linear-gradient(145deg, rgba(255,255,255,0.42), rgba(255,255,255,0.14)),
-    rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(255,255,255,0.6);
   border-radius: 22px;
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.58),
+    inset 0 1px 0 rgba(255,255,255,1),
     0 12px 28px rgba(44, 63, 75, 0.12);
   display: flex;
   grid-column: 2;
@@ -275,11 +272,11 @@ select {
 
 :root[data-theme-tone="dark"] .bookmark-icon-frame {
   background:
-    linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
-    rgba(0,0,0,0.18);
-  border-color: rgba(255,255,255,0.08);
+    linear-gradient(145deg, rgba(255,255,255,0.42), rgba(255,255,255,0.14)),
+    rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.18);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.58),
     0 10px 24px rgba(0, 0, 0, 0.24);
 }
 

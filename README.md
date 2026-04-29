@@ -1,12 +1,15 @@
-# Startup Dashboard
+# Launchly
 
-A local browser start page with bookmarks, weather, calendar events, and a rotating image — served from your own machine. No cloud accounts, no subscriptions.
+A self-hosted start page for your browser. Bookmarks, weather, calendar, and a live image — served from your Mac, no cloud required.
 
-![dashboard preview](docs/preview.png)
+| | |
+|---|---|
+| ![Horizontal light](docs/horizontal-light.png) | ![Horizontal dark](docs/horizontal-dark.png) |
+| ![Vertical light](docs/vertical-light.png) | ![Vertical dark](docs/vertical-dark.png) |
 
 ## Features
 
-- **Bookmark tiles** — one-click links to your most-used apps
+- **Bookmark tiles** — one-click links to your most-used apps, laid out the way you want
 - **Weather** — current conditions + 7-day forecast via [Open-Meteo](https://open-meteo.com/) (no API key needed)
 - **Calendar** — reads from Apple Calendar directly; picks up every synced calendar (iCloud, Exchange, local)
 - **Image tile** — rotating photo from any direct-link URL, or a random placeholder
@@ -17,7 +20,7 @@ A local browser start page with bookmarks, weather, calendar events, and a rotat
 
 ```bash
 git clone <repo-url>
-cd startup-dashboard
+cd launchly
 npm install
 npm run dev        # frontend at http://localhost:5173
 npm run server     # backend at http://localhost:4317
