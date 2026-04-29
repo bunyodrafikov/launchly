@@ -779,6 +779,7 @@ h3 {
   gap: 24px;
   grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
   grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
 }
 
 .horizontal .calendar-tile {
@@ -792,7 +793,9 @@ h3 {
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.28);
   border-radius: 18px;
+  max-width: 100%;
   min-width: 0;
+  overflow: hidden;
   padding: 18px;
 }
 
