@@ -11,3 +11,4 @@ config/settings.ts
 config/server.js
 config/icons/*
 !config/icons/.gitkeep
+.todo.md
