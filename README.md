@@ -1,6 +1,6 @@
 # Launchly
 
-A self-hosted start page for your browser. Bookmarks, weather, calendar, and a live image — served from your Mac, no cloud required.
+Safari's start page isn't customizable — you get what Apple gives you. Launchly replaces it with a dashboard you control: your bookmarks, weather, calendar, and a live image, served from your own Mac with no accounts or subscriptions.
 
 | | |
 |---|---|
@@ -19,7 +19,7 @@ A self-hosted start page for your browser. Bookmarks, weather, calendar, and a l
 ## Quick Start
 
 ```bash
-git clone <repo-url>
+git clone git@github.com:bunyodrafikov/launchly.git
 cd launchly
 npm install
 npm run dev        # frontend at http://localhost:5173
@@ -76,6 +76,14 @@ The calendar tile reads from **Apple Calendar** — no API keys, no OAuth. All c
 Start the backend (`npm run server`) and open the dashboard. macOS will show a one-time permission prompt. Click **Allow**.
 
 If you missed the prompt: **System Settings → Privacy & Security → Calendars** → enable access for Terminal or Node.
+
+## Set as Safari Start Page
+
+1. Run the backend: `npm run server` (or install the LaunchAgent below so it starts automatically)
+2. In Safari: **Settings → General**
+   - Set **New windows open with** → Homepage
+   - Set **New tabs open with** → Homepage
+   - Set **Homepage** to `http://localhost:4317`
 
 ## Auto-Start on Login (macOS)
 
