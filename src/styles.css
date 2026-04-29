@@ -158,8 +158,9 @@ select {
     0 14px 36px rgba(44, 63, 75, 0.14);
   display: flex;
   gap: 0;
-  max-width: 520px;
+  max-width: 680px;
   position: relative;
+  user-select: none;
   width: 100%;
   z-index: 2;
 }
@@ -197,9 +198,11 @@ select {
 }
 
 .search-engine-icon {
+  -webkit-user-drag: none;
   border-radius: 6px;
   height: 26px;
   object-fit: contain;
+  pointer-events: none;
   width: 26px;
 }
 
@@ -257,9 +260,11 @@ select {
 }
 
 .search-engine-option-icon {
+  -webkit-user-drag: none;
   border-radius: 5px;
   height: 22px;
   object-fit: contain;
+  pointer-events: none;
   width: 22px;
 }
 

@@ -49,7 +49,7 @@ export function renderSearch(): string {
   const menuItems = ENGINES.map(
     (e) => `
     <li class="search-engine-option${e.id === engine.id ? " is-active" : ""}" role="option" data-engine="${e.id}" aria-selected="${e.id === engine.id}">
-      <img src="${e.icon}" alt="" class="search-engine-option-icon" />
+      <img src="${e.icon}" alt="" class="search-engine-option-icon" draggable="false" />
       <span>${e.name}</span>
     </li>`
   ).join("");
@@ -58,7 +58,7 @@ export function renderSearch(): string {
     <form class="search" id="searchForm" role="search">
       <div class="search-engine-wrap">
         <button type="button" class="search-engine" id="searchEngineBtn" aria-haspopup="listbox" aria-expanded="false" aria-label="Change search engine">
-          <img src="${engine.icon}" alt="${engine.name}" class="search-engine-icon" id="searchEngineIcon" />
+          <img src="${engine.icon}" alt="${engine.name}" class="search-engine-icon" id="searchEngineIcon" draggable="false" />
           <svg class="search-engine-caret" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
             <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
