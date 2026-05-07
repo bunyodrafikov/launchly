@@ -1,4 +1,13 @@
-export function getWebsiteUrl(value: string): string | null {
+export interface WebsiteAlias {
+  aliases: string[];
+  url: string;
+}
+
+export function getWebsiteUrl(value: string, aliases: WebsiteAlias[] = []): string | null {
+  const normalized = normalizeAlias(value);
+  const match = aliases.find((alias) => alias.aliases.some((item) => normalizeAlias(item) === normalized));
+  if (match) return getWebsiteUrl(match.url);
+
   if (/\s/.test(value)) return null;
 
   const hasScheme = /^[a-z][a-z\d+.-]*:\/\//i.test(value);
@@ -27,4 +36,8 @@ function isWebsiteHost(hostname: string): boolean {
 function isIPv4Host(hostname: string): boolean {
   const parts = hostname.split(".");
   return parts.length === 4 && parts.every((part) => /^\d{1,3}$/.test(part) && Number(part) <= 255);
+}
+
+function normalizeAlias(value: string): string {
+  return value.trim().toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/$/, "");
 }
