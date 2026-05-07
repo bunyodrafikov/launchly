@@ -1,5 +1,7 @@
 export type LayoutMode = "horizontal" | "vertical";
 
+export type SearchEngineId = "google" | "duckduckgo" | "perplexity" | "chatgpt";
+
 export type TileKind =
   | "bookmark"
   | "forecast"

@@ -1,7 +1,8 @@
-import type { WeatherSettings } from "../src/types";
+import type { SearchEngineId, WeatherSettings } from "../src/types";
 
 export const userSettings = {
-  name: "Friend"
+  name: "Friend",
+  defaultSearchEngine: "google" as SearchEngineId
 };
 
 export const weatherSettings: WeatherSettings = {

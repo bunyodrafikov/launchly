@@ -37,7 +37,17 @@ cp config/tiles.example.ts config/tiles.ts
 cp config/settings.example.ts config/settings.ts
 ```
 
-Edit `config/tiles.ts` for your bookmarks and `config/settings.ts` for your name and weather location. Vite picks them up automatically — no import changes needed.
+Edit `config/tiles.ts` for your bookmarks and `config/settings.ts` for your name, weather location, and default search engine. Vite picks them up automatically — no import changes needed.
+
+Available settings in `config/settings.ts`:
+
+| Field | Default | Purpose |
+|---|---|---|
+| `name` | `"Friend"` | Your name (shown in greeting if you add one) |
+| `defaultSearchEngine` | `"google"` | Initial search engine: `google`, `duckduckgo`, `perplexity`, `chatgpt` |
+| `weatherSettings.label` | — | Location name shown in the weather tile |
+| `weatherSettings.latitude` / `longitude` | — | Coordinates for weather data |
+| `weatherSettings.units` | `"metric"` | `"metric"` or `"imperial"` |
 
 ### Tile structure
 
