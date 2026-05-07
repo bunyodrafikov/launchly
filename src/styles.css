@@ -309,6 +309,105 @@ select {
   color: var(--accent);
 }
 
+.search-suggestions {
+  backdrop-filter: blur(22px) saturate(1.4);
+  background: rgba(246, 248, 250, 0.97);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  box-shadow: 0 18px 44px rgba(44,63,75,0.24);
+  left: 0;
+  list-style: none;
+  margin: 0;
+  max-height: min(360px, calc(100vh - 180px));
+  overflow: auto;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 12;
+}
+
+:root[data-theme-tone="dark"] .search-suggestions {
+  background: rgba(24, 34, 48, 0.97);
+  border-color: rgba(255,255,255,0.10);
+  box-shadow: 0 16px 42px rgba(0,0,0,0.54);
+}
+
+.search-suggestion {
+  align-items: center;
+  border-radius: 12px;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  gap: 12px;
+  min-height: 54px;
+  padding: 8px 10px;
+}
+
+.search-suggestion:hover,
+.search-suggestion.is-active {
+  background: rgba(255,255,255,0.52);
+}
+
+:root[data-theme-tone="dark"] .search-suggestion:hover,
+:root[data-theme-tone="dark"] .search-suggestion.is-active {
+  background: rgba(255,255,255,0.08);
+}
+
+.search-suggestion-icon,
+.search-suggestion-fallback {
+  -webkit-user-drag: none;
+  border-radius: 7px;
+  flex: 0 0 auto;
+  height: 28px;
+  object-fit: contain;
+  width: 28px;
+}
+
+.search-suggestion-fallback {
+  align-items: center;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  color: var(--accent);
+  display: inline-flex;
+  font-size: 0.82rem;
+  font-weight: 700;
+  justify-content: center;
+}
+
+.search-suggestion-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.search-suggestion-title,
+.search-suggestion-subtitle {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-suggestion-title {
+  font-size: 0.95rem;
+  font-weight: 650;
+}
+
+.search-suggestion-subtitle {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.search-suggestion-kind {
+  color: var(--text-muted);
+  flex: 0 0 auto;
+  font-size: 0.74rem;
+  font-weight: 650;
+  letter-spacing: 0;
+  opacity: 0.72;
+}
+
 /* ── Tile grid ──────────────────────────────────────────────── */
 
 .tile-grid {
